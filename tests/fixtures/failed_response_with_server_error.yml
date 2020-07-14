@@ -1,0 +1,35 @@
+
+-
+    request:
+        method: GET
+        url: 'https://igw-demo.every-pay.com/api/v3/payments/68c18cd169333079f0cb231837ec41f93068f74fcb1cbb1672e2a215cb190eb4?api_username=foo'
+        headers:
+            Host: igw-demo.every-pay.com
+            Accept-Encoding: null
+            User-Agent: 'GuzzleHttp/6.5.5 curl/7.71.1 PHP/7.2.32'
+            Accept: application/json
+            Content-Type: application/json
+            Authorization: 'Basic Zm9vOmJhcg=='
+    response:
+        status:
+            http_version: '1.1'
+            code: '500'
+            message: Internal Server Error
+        headers:
+            Date: 'Tue, 14 Jul 2020 09:50:59 GMT'
+            Content-Type: application/json
+            Content-Length: '857'
+            Connection: keep-alive
+            Status: '500 Internal Server Error'
+            Vary: Origin
+            Strict-Transport-Security: max-age=31536000
+            X-Request-Id: b1653d13-1a81-4573-9632-a2d74a685b04
+            P3P: 'CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"'
+            ETag: 'W/"9c32446b5585b716945d38f0eb173be6"'
+            X-Runtime: '0.174807'
+            X-Powered-By: 'Phusion Passenger'
+            Server: 'nginx + Phusion Passenger'
+            Expires: 'Tue, 14 Jul 2020 09:50:59 GMT'
+            Cache-Control: 'max-age=0, private, no-cache, no-store, no-transform'
+            Pragma: no-cache
+        body: '{"error":{"code":4032,"message":"Can not be captured"}}'

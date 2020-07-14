@@ -1,0 +1,71 @@
+
+-
+    request:
+        method: POST
+        url: 'https://igw-demo.every-pay.com/api/v3/payments/oneoff'
+        headers:
+            Host: igw-demo.every-pay.com
+            Expect: null
+            Accept-Encoding: null
+            User-Agent: 'GuzzleHttp/6.5.5 curl/7.71.1 PHP/7.2.32'
+            Accept: application/json
+            Content-Type: application/json
+            Authorization: 'Basic Zm9vOmJhcg=='
+        body: '{"api_username":"a1fa0d9b0efbe068","account_name":"EUR3D1","nonce":"15f0d86ab35e3a","timestamp":"2020-07-14T10:19:23+0000","customer_url":"https:\/\/shop.example.com\/cart","callback_url":"https:\/\/shop.example.com\/cart","amount":"1.28","order_reference":"order-12122","customer_ip":"1.2.3.4","email":"user@example.com"}'
+    response:
+        status:
+            http_version: '1.1'
+            code: '201'
+            message: Created
+        headers:
+            Date: 'Tue, 14 Jul 2020 10:19:24 GMT'
+            Content-Type: application/json
+            Content-Length: '899'
+            Connection: keep-alive
+            Status: '201 Created'
+            Vary: Origin
+            Strict-Transport-Security: max-age=31536000
+            X-Request-Id: 23ab2675-5388-49ff-8a63-9fb9b9465d4f
+            P3P: 'CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"'
+            ETag: 'W/"5b5cbd5f8b2d5c658ca8eec1a34d1e67"'
+            X-Runtime: '0.462897'
+            X-Powered-By: 'Phusion Passenger'
+            Server: 'nginx + Phusion Passenger'
+            Expires: 'Tue, 14 Jul 2020 10:19:24 GMT'
+            Cache-Control: 'max-age=0, private, no-cache, no-store, no-transform'
+            Pragma: no-cache
+        body: '{"account_name":"EUR3D1","order_reference":"order-12122","email":"user@example.com","customer_ip":null,"customer_url":"https://shop.example.com/cart","payment_created_at":"2020-07-14T10:19:23.782Z","initial_amount":1.28,"standing_amount":1.28,"payment_reference":"d506e0390f08dd2966fdd635cd45feed9d872c4c9544600b8251f12c3e769be4","payment_link":"https://igw-seb-demo.every-pay.com/lp/yodzto/yb2c87","payment_methods":[{"source":"card","display_name":"VISA/MasterCard","country_code":null,"payment_link":"https://igw-seb-demo.every-pay.com/lp/yodzto/yb2c87?method_source=card","logo_url":"https://igw-seb-demo.every-pay.com/assets/payment_methods/cards-8f66060308645f2166872f801690d03e4e2adfa105953f8a3a11aae15cf96523.svg"}],"api_username":"a1fa0d9b0efbe068","processing_error":{"code":null,"message":null},"warnings":{},"stan":null,"fraud_score":null,"payment_state":"initial","payment_method":null}'
+-
+    request:
+        method: GET
+        url: 'https://igw-demo.every-pay.com/api/v3/payments/d506e0390f08dd2966fdd635cd45feed9d872c4c9544600b8251f12c3e769be4?api_username=a1fa0d9b0efbe068'
+        headers:
+            Host: igw-demo.every-pay.com
+            Accept-Encoding: null
+            User-Agent: 'GuzzleHttp/6.5.5 curl/7.71.1 PHP/7.2.32'
+            Accept: application/json
+            Content-Type: application/json
+            Authorization: 'Basic Zm9vOmJhcg=='
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Tue, 14 Jul 2020 10:20:44 GMT'
+            Content-Type: application/json
+            Content-Length: '1070'
+            Connection: keep-alive
+            Status: '200 OK'
+            Vary: Origin
+            Strict-Transport-Security: max-age=31536000
+            X-Request-Id: 38f95f25-034d-4db9-88f0-d529a1cabd41
+            P3P: 'CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"'
+            ETag: 'W/"a81e43b53405fa1d9260c62e6af7dae4"'
+            X-Runtime: '0.102075'
+            X-Powered-By: 'Phusion Passenger'
+            Server: 'nginx + Phusion Passenger'
+            Expires: 'Tue, 14 Jul 2020 10:20:44 GMT'
+            Cache-Control: 'max-age=0, private, no-cache, no-store, no-transform'
+            Pragma: no-cache
+        body: '{"account_name":"EUR3D1","order_reference":"order-12122","email":"user@example.com","customer_ip":"80.89.72.101","customer_url":"https://shop.example.com/cart","payment_created_at":"2020-07-14T10:19:23.782Z","initial_amount":1.28,"standing_amount":1.28,"payment_reference":"d506e0390f08dd2966fdd635cd45feed9d872c4c9544600b8251f12c3e769be4","payment_link":"https://igw-seb-demo.every-pay.com/lp/yodzto/yb2c87","payment_methods":null,"api_username":"a1fa0d9b0efbe068","processing_error":{"code":4018,"message":"3D secure cancelled by issuing bank"},"warnings":{"transaction_attempts_cc_holder_name_usage_frequency":["Cardholder name (Every Pay) has been used in transaction attempts more than maximum allowed: ''5''."]},"stan":null,"fraud_score":500,"payment_state":"failed","payment_method":"card","cc_details":{"last_four_digits":"1112","month":"12","year":"2025","holder_name":"Every Pay","type":"visa","issuer_country":"GB","issuer":"EXTRAS TEST - VISA","cobrand":null,"funding_source":"Credit","product":"Visa Classic","state_3ds":"failed","authorisation_code":"null"}}'
