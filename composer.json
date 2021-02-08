@@ -8,6 +8,8 @@
         "email": "miks@cubesystems.lv"
     }
   ],
+  "homepage": "https://github.com/arbory/omnipay-everypay",
+  "license": "MIT",
   "require": {
     "php": ">=7.2.0",
     "omnipay/common": "~3.0"
