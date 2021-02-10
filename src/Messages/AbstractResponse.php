@@ -16,7 +16,7 @@ abstract class AbstractResponse extends CommonAbstractResponse
         if ($this->data == null) {
             throw new InvalidResponseException('Non parsable response received from the EveryPay API, status code: '
                  . $response->getStatusCode() . ', body: ' . $response->getBody());
-        } elseif ($response->getStatusCode() == 500) {
+        } elseif ($response->getStatusCode() == 404 || $response->getStatusCode() == 500) {
             throw new InvalidResponseException('EveryPay API gateway error, status code: '
                 . $response->getStatusCode() . ', body: ' . $response->getBody());
         }

@@ -84,6 +84,23 @@ class GatewayTest extends GatewayTestCase
         $response = $request->send();
     }
 
+    public function testFailedResponseWithNotFoundError()
+    {
+        VCR::insertCassette('failed_response_with_not_found_error.yml');
+
+        $request = $this->gateway->completeAuthorize([
+            'transactionReference' => '68c18cd169333079f0cb231837ec41f93068f74fcb1cbb1672e2a215cb190eb4'
+        ]);
+
+        $this->expectException(\Omnipay\Common\Exception\InvalidResponseException::class);
+        $this->expectExceptionMessage(
+            'EveryPay API gateway error, status code: 404, ' .
+            'body: {"status":404,"error":"Not Found"}'
+        );
+
+        $response = $request->send();
+    }
+
     public function testSuccesfulAuthorization()
     {
         VCR::insertCassette('succesful_authorization.yml');
