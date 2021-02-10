@@ -16,7 +16,7 @@ Require the package using composer:
 $gateway = Omnipay::create('EveryPay')->initialize([
   'username' => '', // EveryPay api username
   'secret' => '', // EveryPay api secret
-  'accountId' => '', // merchant account ID
+  'accountName' => '', // merchant account name
   'gatewayUrl' => 'https://igw-demo.every-pay.com/api/v3', // use merchant provided url for production
 ]);
 ```
