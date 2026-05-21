@@ -17,7 +17,7 @@ $gateway = Omnipay::create('EveryPay')->initialize([
   'username' => '', // EveryPay api username
   'secret' => '', // EveryPay api secret
   'accountName' => '', // merchant account name
-  'gatewayUrl' => 'https://igw-demo.every-pay.com/api/v3', // use merchant provided url for production
+  'gatewayUrl' => 'https://igw-demo.every-pay.com/api/v4', // use merchant provided url for production
 ]);
 ```
 
